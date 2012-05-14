@@ -1,0 +1,23 @@
+{% extends base.html %}
+{% block content %}
+<h1>Create lunch</h1>
+<form method="post">
+    {% raw xsrf %}
+    <label for="food">Let's eat</label>
+    <input type="text" name="food" placeholder="hamburgers">
+    
+    <label for="tags">And talk about</label>
+    <input type="text" name="tags" placeholder="startups">
+
+    <label for="place">at (place)</label>
+    <input type="text" name="place" placeholder="Texas Longhorn, Slussen">
+
+    <label for="lunch_date">Date</label>
+    <input type="date" name="lunch_date" placeholder="2012-06-12 12:30">
+
+    <label for="slots">How many can join?</label>
+    <input type="number" name="slots" value="2">
+
+    <input type="submit">
+</form>
+{% end %}

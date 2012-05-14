@@ -1,0 +1,24 @@
+<div>
+	 <div class="span4 lunchbox">
+	     <h4>On {{lunch.lunch_date}}</h4>
+	      <p>eat {{lunch.food}} and talk about
+		{% if lunch.tags %}
+			{% for tag in lunch.tags %}
+				<strong>{{tag}}</strong>, 
+			{% end %}
+		{% end %}
+		at {{lunch.place}}</p>
+	      <h4>going</h4>
+		{% if lunch.participants %}
+			{% for participant in lunch.participants %}
+				<a href="http://twitter.com/{{participant.handle}}" target="_blank">
+					<img src="{{participant.avatar_url}}" />
+				</a>
+			{% end %}
+		{% end %}
+		{% if lunch.slots > 0 %}
+			<a href="/lunch/join/{{lunch.id}}">Join</a>
+		{% end %}
+	  <!--Body content-->
+	</div>
+</div>

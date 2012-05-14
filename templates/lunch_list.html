@@ -1,0 +1,10 @@
+{% extends base.html %}
+{% block content %}
+    <ul>
+    {% for lunch in lunches %}
+    <li>
+        {% include lunch_row.html %}
+    </li>
+    {% end %}
+    </ul>
+{% end %}
